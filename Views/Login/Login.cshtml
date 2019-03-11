@@ -1,1 +1,27 @@
+﻿@model EventUfinal.Models.USER
 
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<h2>Login</h2>
+
+@using (@Html.BeginForm("Login", "Login", new { }, FormMethod.Post))
+{
+    <fieldset class="fieldset">
+        
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            @Html.TextBox("email", "", new { @class = "input input-lg input-center", @placeholder = "e-mail", @type = "email", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.Password("password", "", new { @class = "input input-lg input-center", @placeholder = "password", required = "required" })
+        </div>
+        <div class="form-group">
+        <button class="btn btn-green btn-lg">
+            Login
+        </button>
+        </div>
+    </fieldset>
+}
