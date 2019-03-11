@@ -1,1 +1,87 @@
-
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - EventU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Oranienbaum|Roboto|Cuprum" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    
+</head>
+<body class="grid-container">    
+    <header class="header">
+        <div class="search">
+            @using (@Html.BeginForm("Index", "Search", new {},
+            FormMethod.Get))
+            {
+                @Html.TextBox("query", "", new { @class = "input input-sm input-center", @placeholder = "Search...", @Value = ViewBag.query })
+                <button class="btn btn-white btn-sm" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            }
+        </div>
+        <a href="@Url.Action("Index", "Home")" title="eventU" class="logo">
+            <img src="~/images/EventU_darker-03.png" />
+        </a>
+        <nav class="nav" id="nav">
+            <i class="fa fa-user" id="userMenu"></i>
+            <ul class="user-menu border-hoverorange">
+                @if (ViewBag.loggedIn == null)
+                {
+                <li class="option">@Html.ActionLink("Login", "Login", "Login", null, new { @class = "btn btn-darkbrown btn-md" })</li>
+                <li class="option">@Html.ActionLink("Sign up", "Register", "Register", null, new { @class = "btn btn-darkbrown btn-md" })</li>
+                }
+                else
+                {
+                    <li class="option">@Html.ActionLink("Logout", "Index", "Logout", null, new { @class = "btn btn-darkbrown btn-md" })</li>
+                    <li class="option">@Html.ActionLink("Edit Profile", "Index", "UserEditProfile", null, new { @class = "btn btn-darkbrown btn-md" })</li>
+                    <li class="option">@Html.ActionLink("Your Profile", "Details", "UserEditProfile", null, new { @class = "btn btn-darkbrown btn-md" })</li>
+                }
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu" id="menu"> 
+                @if (ViewBag.user == null) {
+                <li class="option@(ViewBag.controller == "events" ? " option-underline-orange" : "")">@Html.ActionLink("Events", "Index", "Events")</li>
+                <li class="option@(ViewBag.controller == "contact" ? " option-underline-green" : "")">@Html.ActionLink("Contact", "Contact", "Home") </li>
+                }
+                else
+                {
+                    <li class="option">@Html.ActionLink("Events", "Index", "Home")</li>
+                    <li class="option">@Html.ActionLink("Contact", "Contact", "Home") </li>
+                }
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        @RenderBody()
+    </main>
+    <footer class="footer">
+        <div class="card">
+        <div class="card-col-1">
+            <p>  <b>Address: </b> Erhvervsakademi Aarhus </p>
+            <p>  Sønderhøj 30, 8260 Viby J </p>
+            <p>  <b>Telefon:</b> 7228 6000  </p>
+            <p>  <b>Email:</b> info@eaaa.dk  </p>
+        </div>
+            <div class="card-col-2">
+                <p class="option">@Html.ActionLink("Login", "Login", "Login")</p>
+                <p class="option">@Html.ActionLink("Sign up", "Register", "Register")</p>
+                <a href="https://www.facebook.com/" class="icon" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/" class="icon" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">&copy; @DateTime.Now.Year - By eventU</p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Content/js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

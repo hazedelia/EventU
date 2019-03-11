@@ -1,0 +1,17 @@
+﻿@model EventUfinal.Models.ALL_EVENTS
+
+    <div class="card">
+        <div class="card-col-1">
+            <h2 class="uppercase font-abel">@Model.title</h2>
+            <p class="uppercase">
+                @Model.event_date<br />
+                &commat;@Model.venue, @Model.entrance
+            </p>
+            @Html.ActionLink("Read more", "SingleEvent", "Events", new { id = Model.event_id }, null)
+        </div>
+        <div class="card-col-2">
+            <a href="Events/SingleEvent/@Model.event_id">
+                <img class="img img-responsive" src="@Model.event_image" /> <br />
+            </a>
+        </div>
+    </div>
