@@ -1,0 +1,35 @@
+﻿@model List<EventUfinal.Models.ALL_EVENTS>
+
+@{
+    ViewBag.Title = "Events";
+}
+
+<img class="img img-responsive" src="~/images/color_fest363.jpg" />
+<div class="card card-boxed">
+    <div class="card-col-1 bg-orange">
+        <a href="~/Search?query=music" target="_self" class="icon">
+            <div class="border-hoverorange">
+                <h3 class="uppercase font-abel font-vh f-color-hoverorange">
+                    Concerts
+                </h3>
+            </div>
+        </a>
+    </div>
+    <div class="card-col-2 bg-hoverorange">
+        <a href="~/Search?query=course" target="_self" class="icon">
+            <div class="border-orange">
+                <h3 class="uppercase font-abel font-vh f-color-orange">
+                    Workshops
+                </h3>
+            </div>
+        </a>
+    </div>
+</div>
+<br />
+<h2>HAPPENING SOON</h2>
+<div class="card-list">
+    @foreach (EventUfinal.Models.ALL_EVENTS item in ViewBag.upcomingEvents)
+            {
+        @Html.Partial("Event", item)
+    }
+</div>
