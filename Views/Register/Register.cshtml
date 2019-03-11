@@ -1,1 +1,37 @@
+﻿@model EventUfinal.Models.USER
 
+@{
+    ViewBag.Title = "Sign Up";
+}
+
+<h2>Create new account</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    <fieldset class="fieldset">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.TextBox("firstname", "", new { @class = "input input-lg input-center", @placeholder = "firstname", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.TextBox("lastname", "", new { @class = "input input-lg input-center", @placeholder = "lastname", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.TextBox("birthday", "", new { @class = "input input-lg input-center", @placeholder = "birthday", @type = "date", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.TextBox("email", "", new { @class = "input input-lg input-center", @placeholder = "email", @type = "email", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.Password("password", "", new { @class = "input input-lg input-center", @placeholder = "password", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.TextBox("street", "", new { @class = "input input-lg input-center", @placeholder = "full address", required = "required" })
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-green btn-lg">Submit</button>
+        </div>
+    </fieldset>
+}
