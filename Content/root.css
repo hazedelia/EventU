@@ -1,0 +1,38 @@
+﻿:root {
+    --black:        #000000;
+    --white:        #ffffff;
+    --orange:       #df7326;
+    --hoverorange:  #dcc2a9;
+    --beige:        #f9f6e1;
+    --green:        #77be74;
+    --darkgreen:    #1a5546;
+    --hovergreen:   #9fc49e;
+    --darkbrown:    #705b45;
+    --hoverbrown:   #B6a18d;
+}
+
+.bg-orange {
+    background-color: var(--orange);
+}
+
+.bg-hoverorange {
+    background-color: var(--hoverorange);
+}
+
+.f-color-orange {
+    color: var(--orange);
+}
+
+.f-color-hoverorange {
+    color: var(--hoverorange);
+}
+
+.border-orange {
+    border: 0.1em var(--orange) solid;
+    margin: 1em;
+}
+
+.border-hoverorange {
+    border: 0.1em var(--hoverorange) solid;
+    margin: 1em;
+}

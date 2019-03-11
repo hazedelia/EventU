@@ -1,0 +1,172 @@
+﻿.card-list > .card:nth-child(uneven) {
+    flex-flow: row wrap;
+}
+
+.card-list > .card:nth-child(even) {
+    flex-flow: row-reverse wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-boxed {
+    align-content: center;
+    justify-content: center;
+}
+
+.card-boxed > .card-col-1, .card-boxed > .card-col-2 {
+    height: 12.5em;
+}
+
+.card-col-1, .card-col-2 {
+    align-self: center;
+    flex: 1 0;
+    min-width: 50%;
+    text-align: center;
+}
+
+.e_content {
+    align-self: center;
+    width: 50%;
+    text-align: justify;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.card-col2 {
+    
+    text-align:left;
+    max-width: 50%;
+    display:block;
+    float:right;
+    padding-right:5%;
+}
+
+
+.card-col-4 {
+    align-self: center;
+    flex: 1 0;
+    max-width: 15%;
+    text-align:center;
+    flex-wrap:wrap;
+
+}
+
+.flex_container {
+    display:flex;
+    //flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+
+.center {
+    text-align:center;
+    margin-left:10%;
+}
+
+.user-details {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5em;
+    color: var(--darkbrown);
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.user-details img {
+    width: 200px;
+    height: auto;
+}
+
+.user-details li {
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.user-details li:before {
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 1px;
+    background-color: var(--green);
+    top: 30px;
+    left: 0;
+}
+
+
+
+@media screen and (max-width: 980px) {
+    .card-list > .card:nth-child(uneven) {
+        flex-flow: inherit;
+    }
+
+    .card-list > .card:nth-child(even) {
+        flex-flow: inherit;
+    }
+
+    .card {
+        flex-direction: column-reverse !important;
+        margin-bottom: 60px;
+    }
+
+    .card > .card-col-1, .card > .card-col-2 {
+        min-width: 100%;
+    }
+
+    .font-vh {
+        margin: 1.4em;
+        font-size: 1.5em !important;
+    }
+
+    .card-boxed > .card-col-1, .card-boxed > .card-col-2 {
+        height: 8.4em;
+    }
+
+    .card-col-4 {
+        align-self: center;
+        flex: 1 0;
+        max-width: 25%;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .flex_container {
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+
+    
+
+    .flex_container {
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    .map {
+        max-width: 100%;
+    }
+
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+
+    .filter {
+        flex: 1;
+    }
+
+    .search {
+        flex: 1;
+    }
+
+}

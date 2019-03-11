@@ -1,0 +1,75 @@
+﻿h2, h3, h4, h5, h6 {
+    font-family: 'Oranienbaum', serif;
+}
+
+h1 {
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 100;
+    color: var(--green);
+    text-transform: uppercase;
+    text-align:center;
+}
+
+h2 {
+    color: var(--orange);
+    text-align:center;
+    font-family:'Abel';
+    text-transform:uppercase;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Abel', sans-serif;
+}
+
+.icon {
+    text-decoration: none;
+}
+
+a {
+    color: var(--orange);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.font-abel {
+    font-family: 'Abel', sans-serif !important;
+}
+
+.font-vh {
+    margin: 1.4em;
+    font-size: 2.5em;
+}
+
+.justify {
+    text-align:justify;
+}
+
+right {
+    text-align:right;
+}
+
+.people {
+    padding-top:5%;
+}
+
+h3 {
+    font-family: 'Abel', sans-serif !important;
+    color: var(--darkbrown);
+    text-transform: uppercase;
+   
+}
+
+.sort {
+    padding-left: 5%;
+    min-width: 150px;
+}
+
+.filter {
+    padding-left:5%;
+}

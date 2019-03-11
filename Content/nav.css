@@ -1,0 +1,162 @@
+﻿.nav {
+    display: flex;
+    flex: 1;
+    height: 40px;
+    text-align: center;
+}
+
+.nav > .fa-user {
+    align-self: flex-end;
+    display: block;
+    font-size: 28px;
+    margin: 0 auto;
+    opacity: .3;
+    padding: 4px;
+}
+
+.hamburger {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    margin: 6px 12px;
+}
+
+.hamburger > .bar {
+    background-color: var(--black);
+    height: 3px;
+    margin: 6px 0;
+    width: 35px;
+}
+
+.menu {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    top: 0;
+}
+
+.menu {
+    background-color: var(--beige);
+    border-top: 2px var(--white) solid;
+    height: auto;
+    position: fixed;
+    top: 86px; right: 0; left: 0;
+}
+
+.user-menu {
+    background-color: var(--beige);
+    border-radius: 5px;
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    top: 44px; right: 10px;
+    text-align: left;
+    padding: 10px;
+    z-index: 100;
+}
+
+.user-menu.show {
+    display: block;
+}
+
+.menu > .option {
+    border-bottom: 2px var(--orange) transparent;
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu.show-menu > .option {
+    float: none;
+}
+
+.menu > .option > a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu > .option:nth-child(1) > a {
+    color: var(--orange);
+}
+
+.menu > .option:nth-child(2) > a {
+    color: var(--green);
+}
+
+.menu > .option:nth-child(3) > a {
+    color: var(--hoverbrown);
+}
+
+.menu > .option {
+    float: left;
+}
+
+.option-underline-orange {
+    border-bottom: 2px var(--orange) solid !important;
+}
+
+.option-underline-green {
+    border-bottom: 2px var(--green) solid !important;
+}
+
+@media screen and (max-width: 480px) {
+  .menu.show-menu {
+      display: none;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .search > form > .input {
+      width: 50px;
+  }
+
+  .main {
+      margin-top: 78px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+    .menu {
+      display: flex !important;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+.copyright {
+    text-align: center;
+}
+
+#userMenu {
+    margin-right: 15px
+}
+
+.user-menu {
+    margin-right: 30px !important; 
+}
+
+.fa-facebook {
+    font-size : 30px;
+    margin-right: 7px;
+}
+
+.fa-instagram {
+    font-size: 30px;
+}
+
+.back-button {
+    font-size: 19px;
+}

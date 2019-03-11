@@ -1,0 +1,64 @@
+﻿.input {
+    background-color: transparent;
+    border-color: var(--hovergreen);
+    border-width: 0 0 2px;
+    font-family: 'Abel', sans-serif;
+    font-size: 19px;
+    opacity: .8;
+    
+}
+
+.input:focus {
+    border-color: var(--green);
+    outline: 0;
+    opacity: 1;
+}
+
+.input-sm {
+    margin: 6px 0;
+    padding: 6px 9px;
+}
+
+.input-md {
+    margin: 9px 0;
+    padding: 9px 12px;
+}
+
+.input-lg {
+    margin: 15px 0;
+    padding: 18px 28px;
+}
+
+.input-center {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    text-align: center;
+    
+}
+
+.fieldset {
+    border: 2px var(--hovergreen) solid;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 2em 5em;
+    width: 200px;
+}
+
+.fieldset > legend {
+    font-size: 30px;
+}
+
+
+.fieldset {
+
+    display:flex;
+    justify-content:space-evenly;
+    flex-direction:column;
+}
+
+.contact-content {
+    font-size: 19px;
+}
