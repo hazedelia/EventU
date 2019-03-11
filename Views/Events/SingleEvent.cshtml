@@ -1,0 +1,53 @@
+﻿@model EventUfinal.Models.ALL_EVENTS
+
+@{
+    ViewBag.Title = Model.title;
+}
+
+<h1> @Model.title</h1>
+
+<div>
+
+    <div class="dl-horizontal full card">
+        
+           
+                <img class="img-responsive img event_image" src="@Model.event_image"  alt="Alternate Text" align="center"/>
+            
+         
+    </div>
+    <div>
+        <h2>INFO</h2>
+        
+            <p class="e_content">@Model.content </p>
+        
+        <div class="card-col2 right">
+
+            <p><strong>Entry: </strong>@Model.cost </p>
+            <p><strong>Date: </strong>@Model.event_date</p>
+            <p><strong>Time: </strong>@Model.start_timestamp,@Model.end_timestamp</p>
+            <p><strong>Venue: </strong>@Model.venue</p>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="center">
+    <br /> <br /> <br /> <br />
+    <button class="btn btn-green btn-green2 btnlarge" type="button">GO</button>
+    <button class="btn btn-darkbrown btn-darkbrown_ev btnlarge" type="button">INTERESTED</button>
+</div>
+
+<h2 class="people">ATTENDEES</h2>
+<div class="flex_container">
+    <img class="img img-responsive card-col-4" src="~/images/USERS-01.png" />
+    <img class="img img-responsive card-col-4" src="~/images/USERS-02.png" />
+    <img class="img img-responsive card-col-4" src="~/images/USERS-03.png" />
+    <img class="img img-responsive card-col-4" src="~/images/user5-04.png" />
+</div>
+<p class="copyright back-button">
+    @Html.ActionLink("Back to List", "Index")
+</p>
