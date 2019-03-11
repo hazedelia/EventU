@@ -1,1 +1,31 @@
+﻿
+@model IEnumerable<EventUfinal.Models.ALL_EVENTS>
+
+@{
+    ViewBag.Title = "Events";
+}
+
+<h2>All events</h2>
+<div class="wrapper">
+    <div class="sort">
+        <h3>Sort by:</h3>
+        @Html.ActionLink("Venue", "Index", new { sortAsc = "venue" }, new { @class = "btn_filter btn-white btn-lg" })
+        @Html.ActionLink("Date", "Index", new { sortAsc = "date" }, new { @class = "btn_filter btn-white btn-lg" })
+    </div>
+
+
+
+    <div class="filter">
+        <h3>Filter by:</h3>
+        @Html.ActionLink("Free entrace", "Index", new { sortAsc = "free" }, new { @class = "btn_filter btn-white btn-lg" })
+        @Html.ActionLink("Upcoming events", "Index", new { sortAsc = "upcoming" }, new { @class = "btn_filter btn-white btn-lg" })
+    </div>
+</div>
+
+<div class="card-list">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("Event", item)
+    }
+</div>
 
