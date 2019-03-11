@@ -1,0 +1,112 @@
+﻿.btn {
+    border: 1px var(--white) solid ;
+    border-radius: 20px;
+    color: var(--beige);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration:none;
+}
+
+.btn_filter {
+    border: 1px var(--white) solid;
+    border-radius: 20px;
+    color: var(--beige);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: pre;
+}
+
+
+
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn-green {
+    background-color: var(--green);
+}
+
+.btn-green:hover {
+    background-color: var(--hovergreen);
+}
+
+.btn-darkbrown {
+    background-color: var(--darkbrown);
+}
+
+.btn-darkbrown:hover {
+    background-color: var(--hoverbrown);
+}
+
+.btn-white {
+    border: 1px var(--green) solid !important;
+    background-color: var(--white);
+    color: var(--green) !important;
+}
+
+.btn-white:hover {
+    border: 1px var(--white) solid !important;
+    background-color: var(--green);
+    color: var(--beige) !important;
+}
+
+.btn-sm {
+    margin: 6px 0;
+    padding: 6px 9px;
+}
+
+.btn-md {
+    margin: 9px 0;
+    padding: 9px 12px;
+}
+
+.btn-lg {
+    margin: 12px 0;
+    padding: 12px 15px;
+}
+
+
+.btnlarge {
+    text-align:center;
+    align-self:center;
+    
+    margin:0 auto;
+    align-items:center;
+    margin-left:0;
+    margin-right:0;
+
+
+}
+
+.btn-darkbrown_ev {
+    margin-left: 5%;
+    width: 20%;
+    padding: 12px 0 12px 0;
+}
+
+.btn-green2 {
+    background-color: var(--green);
+    width: 20%;
+    padding:12px 0 12px 0;
+}
+
+
+@media screen and (max-width: 980px) {
+
+    .btn-darkbrown_ev {
+        margin:0;
+        width: 50%;
+    }
+
+    .btn-green2 {
+        background-color: var(--green);
+        width: 50%;
+        margin:0;
+    }
+}
