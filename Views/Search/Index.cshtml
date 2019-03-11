@@ -1,1 +1,14 @@
+﻿@using EventUfinal.Models
+@model EventUfinal.Models.ALL_EVENTS
+@{
+    ViewBag.Title = "Index";
+}
 
+<h1>Search results: @ViewBag.count</h1>
+<hr />
+<div class="card-list">
+    @foreach (ALL_EVENTS obj in ViewBag.ALL_EVENTS)
+    {
+        @Html.Partial("Event", obj)
+    }
+</div>
